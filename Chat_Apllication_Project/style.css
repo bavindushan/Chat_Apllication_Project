@@ -1,0 +1,25 @@
+main{
+    background-color: black;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: white;
+    height: auto;
+}
+.dropDown{
+    margin-top: 12px;
+}
+.senderMe{
+    display: flex;
+    justify-content: right;
+}
+.senderOneSide{
+    display: flex;
+}
+.SendArea{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;   
+}
+.txtInput{
+    margin-right: 10px;
+}
