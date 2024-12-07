@@ -14,7 +14,7 @@ function sendMsg() {
     body += `<div class="senderMe">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h6 class="card-title">Me</h6>
+                            <h6 class="card-title"></h6>
                             <p>${msg}</p>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ function sendMsg() {
             {
                 "parts": [
                     {
-                        "text": document.getElementById("txtInput").value
+                        "text": msg
                     }
                 ]
             }
@@ -44,15 +44,15 @@ function sendMsg() {
     };
 
     fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCQRZXFSwjbYxhiyUh9gbGFZ4tX8Ojnw9Y", requestOptions)
-        .then((response) => response.text())
+        .then((response) => response.json())
         .then((result) => {
-            console.log(result);
+            console.log(result.candidates[0].content.parts[0].text);
 
                 body += `<div class="senderOneSide">
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title">ChatBot</h5>
-                                    <p>${result}</p>
+                                    <h5 class="card-title"></h5>
+                                    <p>${result.candidates[0].content.parts[0].text}</p>
                                 </div>
                             </div>
                         </div>`;
