@@ -1,5 +1,7 @@
 
-var sender = sender2;
+
+
+let sender = "";
 function changeSender() {
     sender = document.getElementById("selectSender").value;
 }
@@ -9,7 +11,7 @@ function sendMsg() {
     console.log(sender);
     console.log(msg);
 
-    let body;
+    let body = "";
 
     if (sender === "sender1") {
         body += `<div class="senderOneSide">
@@ -31,5 +33,6 @@ function sendMsg() {
                 </div>`;
     }
 
-    document.getElementById("msgBody").innerHTML = body;
+    document.getElementById("msgBody").innerHTML += body;
+    document.getElementById("txtInput").value = "";
 }

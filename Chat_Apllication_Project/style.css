@@ -11,9 +11,11 @@ main{
 .senderMe{
     display: flex;
     justify-content: right;
+    margin: 5px;
 }
 .senderOneSide{
     display: flex;
+    margin: 5px;
 }
 .SendArea{
     display: flex;
